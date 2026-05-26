@@ -489,7 +489,11 @@ const platformOptions = [
   { value: 'anthropic', label: 'Anthropic' },
   { value: 'openai', label: 'OpenAI' },
   { value: 'gemini', label: 'Gemini' },
-  { value: 'antigravity', label: 'Antigravity' }
+  { value: 'antigravity', label: 'Antigravity' },
+  { value: 'deepseek', label: 'DeepSeek' },
+  { value: 'qwen', label: 'Qwen' },
+  { value: 'zhipu', label: 'Zhipu' },
+  { value: 'minimax', label: 'MiniMax' }
 ]
 
 // Load rules when dialog opens

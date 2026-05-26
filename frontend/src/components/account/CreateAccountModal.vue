@@ -148,6 +148,61 @@
             Antigravity
           </button>
         </div>
+        <!-- Second row: more platforms -->
+        <div class="mt-2 flex rounded-lg bg-gray-100 p-1 dark:bg-dark-700">
+          <button
+            type="button"
+            @click="form.platform = 'deepseek'"
+            :class="[
+              'flex flex-1 items-center justify-center gap-2 rounded-md px-4 py-2.5 text-sm font-medium transition-all',
+              form.platform === 'deepseek'
+                ? 'bg-white text-yellow-600 shadow-sm dark:bg-dark-600 dark:text-yellow-400'
+                : 'text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-200'
+            ]"
+          >
+            <Icon name="sparkles" size="sm" />
+            DeepSeek
+          </button>
+          <button
+            type="button"
+            @click="form.platform = 'qwen'"
+            :class="[
+              'flex flex-1 items-center justify-center gap-2 rounded-md px-4 py-2.5 text-sm font-medium transition-all',
+              form.platform === 'qwen'
+                ? 'bg-white text-sky-600 shadow-sm dark:bg-dark-600 dark:text-sky-400'
+                : 'text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-200'
+            ]"
+          >
+            <Icon name="sparkles" size="sm" />
+            Qwen
+          </button>
+          <button
+            type="button"
+            @click="form.platform = 'zhipu'"
+            :class="[
+              'flex flex-1 items-center justify-center gap-2 rounded-md px-4 py-2.5 text-sm font-medium transition-all',
+              form.platform === 'zhipu'
+                ? 'bg-white text-rose-600 shadow-sm dark:bg-dark-600 dark:text-rose-400'
+                : 'text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-200'
+            ]"
+          >
+            <Icon name="sparkles" size="sm" />
+            Zhipu
+          </button>
+          <button
+            type="button"
+            @click="form.platform = 'minimax'"
+            :class="[
+              'flex flex-1 items-center justify-center gap-2 rounded-md px-4 py-2.5 text-sm font-medium transition-all',
+              form.platform === 'minimax'
+                ? 'bg-white text-indigo-600 shadow-sm dark:bg-dark-600 dark:text-indigo-400'
+                : 'text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-200'
+            ]"
+          >
+            <Icon name="sparkles" size="sm" />
+            MiniMax
+          </button>
+        </div>
       </div>
 
       <!-- Account Type Selection (Anthropic) -->

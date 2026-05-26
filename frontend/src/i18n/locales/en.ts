@@ -97,6 +97,10 @@ export default {
       claude: 'Claude',
       gemini: 'Gemini',
       antigravity: 'Antigravity',
+      deepseek: 'DeepSeek',
+      qwen: 'Qwen',
+      zhipu: 'Zhipu',
+      minimax: 'MiniMax',
       more: 'More'
     },
     // CTA section
@@ -2149,6 +2153,10 @@ export default {
         openai: 'OpenAI',
         gemini: 'Gemini',
         antigravity: 'Antigravity',
+        deepseek: 'DeepSeek',
+        qwen: 'Qwen',
+        zhipu: 'Zhipu',
+        minimax: 'MiniMax',
       },
       deleteConfirm:
         "Are you sure you want to delete '{name}'? All associated API keys will no longer belong to any group.",
@@ -3022,6 +3030,10 @@ export default {
         openai: 'OpenAI',
         gemini: 'Gemini',
         antigravity: 'Antigravity',
+        deepseek: 'DeepSeek',
+        qwen: 'Qwen',
+        zhipu: 'Zhipu',
+        minimax: 'MiniMax',
       },
       types: {
         oauth: 'OAuth',

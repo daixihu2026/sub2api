@@ -2406,7 +2406,12 @@ func (s *OpenAIGatewayService) Forward(ctx context.Context, c *gin.Context, acco
 				delete(reqBody, "max_output_tokens")
 				bodyModified = true
 				markPatchDelete("max_output_tokens")
-			default:
+			case PlatformDeepSeek, PlatformQwen, PlatformZhipu, PlatformMiniMax:
+				// For OpenAI-compatible platforms, remove max_output_tokens (not supported)
+				delete(reqBody, "max_output_tokens")
+				bodyModified = true
+				markPatchDelete("max_output_tokens")
+		default:
 				// For unknown platforms, remove to be safe
 				delete(reqBody, "max_output_tokens")
 				bodyModified = true

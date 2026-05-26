@@ -41,6 +41,10 @@ const (
 	PlatformOpenAI      = domain.PlatformOpenAI
 	PlatformGemini      = domain.PlatformGemini
 	PlatformAntigravity = domain.PlatformAntigravity
+	PlatformDeepSeek    = domain.PlatformDeepSeek
+	PlatformQwen        = domain.PlatformQwen
+	PlatformZhipu       = domain.PlatformZhipu
+	PlatformMiniMax     = domain.PlatformMiniMax
 )
 
 // AllowedQuotaPlatforms 是允许设置 user × platform quota 的平台列表（单一权威来源）。
@@ -51,6 +55,10 @@ var AllowedQuotaPlatforms = []string{
 	PlatformOpenAI,
 	PlatformGemini,
 	PlatformAntigravity,
+	PlatformDeepSeek,
+	PlatformQwen,
+	PlatformZhipu,
+	PlatformMiniMax,
 }
 
 // IsAllowedQuotaPlatform 报告 s 是否为合法的 quota platform 标识。
@@ -311,6 +319,10 @@ const (
 	SettingKeyFallbackModelOpenAI      = "fallback_model_openai"
 	SettingKeyFallbackModelGemini      = "fallback_model_gemini"
 	SettingKeyFallbackModelAntigravity = "fallback_model_antigravity"
+	SettingKeyFallbackModelDeepSeek   = "fallback_model_deepseek"
+	SettingKeyFallbackModelQwen       = "fallback_model_qwen"
+	SettingKeyFallbackModelZhipu      = "fallback_model_zhipu"
+	SettingKeyFallbackModelMiniMax    = "fallback_model_minimax"
 
 	// Request identity patch (Claude -> Gemini systemInstruction injection)
 	SettingKeyEnableIdentityPatch = "enable_identity_patch"

@@ -419,6 +419,9 @@ func (s *AccountService) TestCredentials(ctx context.Context, id int64) error {
 	case PlatformGemini:
 		// TODO: 测试Gemini API凭证
 		return nil
+	case PlatformDeepSeek, PlatformQwen, PlatformZhipu, PlatformMiniMax:
+		// OpenAI-compatible platforms share the same test logic
+		return nil
 	default:
 		return fmt.Errorf("unsupported platform: %s", account.Platform)
 	}
