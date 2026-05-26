@@ -23,8 +23,12 @@ import (
 	pkghttputil "github.com/Wei-Shaw/sub2api/internal/pkg/httputil"
 	"github.com/Wei-Shaw/sub2api/internal/pkg/ip"
 	"github.com/Wei-Shaw/sub2api/internal/pkg/logger"
+	"github.com/Wei-Shaw/sub2api/internal/pkg/deepseek"
+	"github.com/Wei-Shaw/sub2api/internal/pkg/minimax"
 	"github.com/Wei-Shaw/sub2api/internal/pkg/openai"
+	"github.com/Wei-Shaw/sub2api/internal/pkg/qwen"
 	"github.com/Wei-Shaw/sub2api/internal/pkg/timezone"
+	"github.com/Wei-Shaw/sub2api/internal/pkg/zhipu"
 	middleware2 "github.com/Wei-Shaw/sub2api/internal/server/middleware"
 	"github.com/Wei-Shaw/sub2api/internal/service"
 
@@ -992,6 +996,38 @@ func (h *GatewayHandler) Models(c *gin.Context) {
 		c.JSON(http.StatusOK, gin.H{
 			"object": "list",
 			"data":   geminicli.DefaultModels,
+		})
+		return
+	}
+
+	if platform == service.PlatformDeepSeek {
+		c.JSON(http.StatusOK, gin.H{
+			"object": "list",
+			"data":   deepseek.DefaultModels,
+		})
+		return
+	}
+
+	if platform == service.PlatformQwen {
+		c.JSON(http.StatusOK, gin.H{
+			"object": "list",
+			"data":   qwen.DefaultModels,
+		})
+		return
+	}
+
+	if platform == service.PlatformZhipu {
+		c.JSON(http.StatusOK, gin.H{
+			"object": "list",
+			"data":   zhipu.DefaultModels,
+		})
+		return
+	}
+
+	if platform == service.PlatformMiniMax {
+		c.JSON(http.StatusOK, gin.H{
+			"object": "list",
+			"data":   minimax.DefaultModels,
 		})
 		return
 	}

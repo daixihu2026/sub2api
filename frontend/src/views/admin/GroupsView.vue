@@ -2923,6 +2923,10 @@ const platformOptions = computed(() => [
   { value: "openai", label: "OpenAI" },
   { value: "gemini", label: "Gemini" },
   { value: "antigravity", label: "Antigravity" },
+  { value: "deepseek", label: "DeepSeek" },
+  { value: "qwen", label: "Qwen" },
+  { value: "zhipu", label: "Zhipu" },
+  { value: "minimax", label: "MiniMax" },
 ]);
 
 const platformFilterOptions = computed(() => [
@@ -2931,6 +2935,10 @@ const platformFilterOptions = computed(() => [
   { value: "openai", label: "OpenAI" },
   { value: "gemini", label: "Gemini" },
   { value: "antigravity", label: "Antigravity" },
+  { value: "deepseek", label: "DeepSeek" },
+  { value: "qwen", label: "Qwen" },
+  { value: "zhipu", label: "Zhipu" },
+  { value: "minimax", label: "MiniMax" },
 ]);
 
 const editStatusOptions = computed(() => [

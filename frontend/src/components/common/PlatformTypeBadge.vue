@@ -76,6 +76,10 @@ const platformLabel = computed(() => {
   if (props.platform === 'anthropic') return 'Anthropic'
   if (props.platform === 'openai') return 'OpenAI'
   if (props.platform === 'antigravity') return 'Antigravity'
+  if (props.platform === 'deepseek') return 'DeepSeek'
+  if (props.platform === 'qwen') return 'Qwen'
+  if (props.platform === 'zhipu') return 'Zhipu'
+  if (props.platform === 'minimax') return 'MiniMax'
   return 'Gemini'
 })
 
@@ -126,6 +130,18 @@ const platformClass = computed(() => {
   if (props.platform === 'antigravity') {
     return 'bg-purple-100 text-purple-700 dark:bg-purple-900/30 dark:text-purple-400'
   }
+  if (props.platform === 'deepseek') {
+    return 'bg-yellow-100 text-yellow-700 dark:bg-yellow-900/30 dark:text-yellow-400'
+  }
+  if (props.platform === 'qwen') {
+    return 'bg-sky-100 text-sky-700 dark:bg-sky-900/30 dark:text-sky-400'
+  }
+  if (props.platform === 'zhipu') {
+    return 'bg-rose-100 text-rose-700 dark:bg-rose-900/30 dark:text-rose-400'
+  }
+  if (props.platform === 'minimax') {
+    return 'bg-indigo-100 text-indigo-700 dark:bg-indigo-900/30 dark:text-indigo-400'
+  }
   return 'bg-blue-100 text-blue-700 dark:bg-blue-900/30 dark:text-blue-400'
 })
 
@@ -138,6 +154,18 @@ const typeClass = computed(() => {
   }
   if (props.platform === 'antigravity') {
     return 'bg-purple-100 text-purple-600 dark:bg-purple-900/30 dark:text-purple-400'
+  }
+  if (props.platform === 'deepseek') {
+    return 'bg-yellow-100 text-yellow-600 dark:bg-yellow-900/30 dark:text-yellow-400'
+  }
+  if (props.platform === 'qwen') {
+    return 'bg-sky-100 text-sky-600 dark:bg-sky-900/30 dark:text-sky-400'
+  }
+  if (props.platform === 'zhipu') {
+    return 'bg-rose-100 text-rose-600 dark:bg-rose-900/30 dark:text-rose-400'
+  }
+  if (props.platform === 'minimax') {
+    return 'bg-indigo-100 text-indigo-600 dark:bg-indigo-900/30 dark:text-indigo-400'
   }
   return 'bg-blue-100 text-blue-600 dark:bg-blue-900/30 dark:text-blue-400'
 })

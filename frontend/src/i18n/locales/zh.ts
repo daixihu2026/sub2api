@@ -97,6 +97,10 @@ export default {
       claude: 'Claude',
       gemini: 'Gemini',
       antigravity: 'Antigravity',
+      deepseek: 'DeepSeek',
+      qwen: '通义千问',
+      zhipu: '智谱',
+      minimax: 'MiniMax',
       more: '更多'
     },
     // CTA 区块
@@ -2177,6 +2181,10 @@ export default {
         openai: 'OpenAI',
         gemini: 'Gemini',
         antigravity: 'Antigravity',
+        deepseek: 'DeepSeek',
+        qwen: '通义千问',
+        zhipu: '智谱',
+        minimax: 'MiniMax',
       },
       saving: '保存中...',
       noGroups: '暂无分组',
@@ -3207,6 +3215,10 @@ export default {
         anthropic: 'Anthropic',
         gemini: 'Gemini',
         antigravity: 'Antigravity',
+        deepseek: 'DeepSeek',
+        qwen: '通义千问',
+        zhipu: '智谱',
+        minimax: 'MiniMax',
       },
       types: {
         oauth: 'OAuth',

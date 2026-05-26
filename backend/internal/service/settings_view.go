@@ -159,6 +159,10 @@ type SystemSettings struct {
 	FallbackModelOpenAI      string `json:"fallback_model_openai"`
 	FallbackModelGemini      string `json:"fallback_model_gemini"`
 	FallbackModelAntigravity string `json:"fallback_model_antigravity"`
+	FallbackModelDeepSeek    string `json:"fallback_model_deepseek"`
+	FallbackModelQwen        string `json:"fallback_model_qwen"`
+	FallbackModelZhipu       string `json:"fallback_model_zhipu"`
+	FallbackModelMiniMax     string `json:"fallback_model_minimax"`
 
 	// Identity patch configuration (Claude -> Gemini)
 	EnableIdentityPatch bool   `json:"enable_identity_patch"`

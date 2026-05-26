@@ -1770,6 +1770,10 @@ func (s *SettingService) buildSystemSettingsUpdates(ctx context.Context, setting
 	updates[SettingKeyFallbackModelOpenAI] = settings.FallbackModelOpenAI
 	updates[SettingKeyFallbackModelGemini] = settings.FallbackModelGemini
 	updates[SettingKeyFallbackModelAntigravity] = settings.FallbackModelAntigravity
+	updates[SettingKeyFallbackModelDeepSeek] = settings.FallbackModelDeepSeek
+	updates[SettingKeyFallbackModelQwen] = settings.FallbackModelQwen
+	updates[SettingKeyFallbackModelZhipu] = settings.FallbackModelZhipu
+	updates[SettingKeyFallbackModelMiniMax] = settings.FallbackModelMiniMax
 
 	// Identity patch configuration (Claude -> Gemini)
 	updates[SettingKeyEnableIdentityPatch] = strconv.FormatBool(settings.EnableIdentityPatch)
@@ -2680,6 +2684,10 @@ func (s *SettingService) InitializeDefaultSettings(ctx context.Context) error {
 		SettingKeyFallbackModelOpenAI:      "gpt-4o",
 		SettingKeyFallbackModelGemini:      "gemini-2.5-pro",
 		SettingKeyFallbackModelAntigravity: "gemini-2.5-pro",
+		SettingKeyFallbackModelDeepSeek:   "deepseek-chat",
+		SettingKeyFallbackModelQwen:       "qwen-plus",
+		SettingKeyFallbackModelZhipu:      "glm-4-flash",
+		SettingKeyFallbackModelMiniMax:    "abab6.5s-chat",
 		// Identity patch defaults
 		SettingKeyEnableIdentityPatch: "true",
 		SettingKeyIdentityPatchPrompt: "",
@@ -3169,6 +3177,10 @@ func (s *SettingService) parseSettings(settings map[string]string) *SystemSettin
 	result.FallbackModelOpenAI = s.getStringOrDefault(settings, SettingKeyFallbackModelOpenAI, "gpt-4o")
 	result.FallbackModelGemini = s.getStringOrDefault(settings, SettingKeyFallbackModelGemini, "gemini-2.5-pro")
 	result.FallbackModelAntigravity = s.getStringOrDefault(settings, SettingKeyFallbackModelAntigravity, "gemini-2.5-pro")
+	result.FallbackModelDeepSeek = s.getStringOrDefault(settings, SettingKeyFallbackModelDeepSeek, "deepseek-chat")
+	result.FallbackModelQwen = s.getStringOrDefault(settings, SettingKeyFallbackModelQwen, "qwen-plus")
+	result.FallbackModelZhipu = s.getStringOrDefault(settings, SettingKeyFallbackModelZhipu, "glm-4-flash")
+	result.FallbackModelMiniMax = s.getStringOrDefault(settings, SettingKeyFallbackModelMiniMax, "abab6.5s-chat")
 
 	// Identity patch settings (default: enabled, to preserve existing behavior)
 	if v, ok := settings[SettingKeyEnableIdentityPatch]; ok && v != "" {
@@ -3608,6 +3620,18 @@ func (s *SettingService) GetFallbackModel(ctx context.Context, platform string) 
 	case PlatformAntigravity:
 		key = SettingKeyFallbackModelAntigravity
 		defaultModel = "gemini-2.5-pro"
+	case PlatformDeepSeek:
+		key = SettingKeyFallbackModelDeepSeek
+		defaultModel = "deepseek-chat"
+	case PlatformQwen:
+		key = SettingKeyFallbackModelQwen
+		defaultModel = "qwen-plus"
+	case PlatformZhipu:
+		key = SettingKeyFallbackModelZhipu
+		defaultModel = "glm-4-flash"
+	case PlatformMiniMax:
+		key = SettingKeyFallbackModelMiniMax
+		defaultModel = "abab6.5s-chat"
 	default:
 		return ""
 	}
